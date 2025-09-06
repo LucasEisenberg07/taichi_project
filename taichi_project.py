@@ -2,23 +2,23 @@ import taichi as ti
 
 ti.init(arch=ti.gpu)
 
-n = 1024
-num_particles = 100
-dt = 0.01
-particle_radius = 15
-particle_radius_fraction = particle_radius / n
-damping_coefficient = 0.8
-mouse_size_factor = 2
-mouse_speed_factor = 30
-elevator_fraction = 0.2
-elevator_acceleration = 2
-gravity = -9.8
+n = 1024 # Size of canvas in pixels
+num_particles = 100 # Number of particles
+dt = 0.01 # Time step
+particle_radius = 13 # Radius of particles
+damping_coefficient = 0.8 # Damping coefficient for collisions between particles and walls
+mouse_size_factor = 2 # Size of the mouse interaction area
+mouse_speed_factor = 30 # How fast the particles move due to mouse movement
+elevator_fraction = 0.2 # Fraction of the screen from the left occupied by the elevator
+elevator_acceleration = 2 # Acceleration of the elevator
+gravity = -9.8 # Acceleration of gravity
 
 positions_circles = ti.Vector.field(2, dtype=ti.f32, shape=num_particles)
 velocities_circles = ti.Vector.field(2, dtype=ti.f32, shape=num_particles)
 accelerations_circles = ti.Vector.field(2, dtype=ti.f32, shape=num_particles)
 colors_circles = ti.field(dtype=ti.f32, shape=num_particles)
 
+particle_radius_fraction = particle_radius / n
 gravity = ti.Vector([0, gravity])
 
 mouse_pos = ti.Vector([0.0, 0.0])
