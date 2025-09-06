@@ -1,0 +1,10 @@
+A simple particle physics simulation with the following adjustable parameters:
+- n: Size of canvas in pixels.
+- num_particles: Number of particles in the simulation, should work up until about 10000. As this is turned up, make sure to turn down the particle_radius to make all the particles fit.
+- particle_radius: Radius of each individual particle in pixels, set to a value between 3-20
+- damping_coefficient: How much energy is conserved in each bounce, if this is too high and there is an elevator present the total energy in the system may increase exponentially.
+- mouse_size_factor: Size of the mouse.
+- mouse_speed_factor: How fast the mouse moves the particles.
+- elevator_fraction: Fraction of the screen from the left that the elevator takes up.
+- elevator_acceleration: Acceleration of the particles in the elevator.
+- gravity: Gravity everywhere outside the elevator.
