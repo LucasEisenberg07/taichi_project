@@ -8,3 +8,7 @@
 - elevator_fraction: Fraction of the screen from the left that the elevator takes up.
 - elevator_acceleration: Acceleration of the particles in the elevator.
 - gravity: Gravity everywhere outside the elevator.
+
+## Running:
+- Run: ``pip install taichi``
+- Run: ``python taichi_project.py``
