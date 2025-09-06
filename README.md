@@ -1,4 +1,4 @@
-A simple particle physics simulation with the following adjustable parameters:
+## A simple particle physics simulation with the following adjustable parameters:
 - n: Size of canvas in pixels.
 - num_particles: Number of particles in the simulation, should work up until about 10000. As this is turned up, make sure to turn down the particle_radius to make all the particles fit.
 - particle_radius: Radius of each individual particle in pixels, set to a value between 3-20
